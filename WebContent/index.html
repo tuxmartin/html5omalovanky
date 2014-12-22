@@ -35,6 +35,7 @@
 <!-- ############################################################### -->
 <script>
 var vypln = "#000"; // vychozi barva = cerna
+var souborObrazku = "0"; // vychozi obrazek
 
 /* CORDOVA */
 function onLoad() { //Wait for device API libraries to load.
@@ -44,15 +45,17 @@ function onDeviceReady() { // device APIs are available.
     // Now safe to use device APIs
 }
 /* CORDOVA */
- 
-  
-$( document ).ready(function() {
 
-	$('#obrazek').load('obrazky/octocat.svg', null, function() { 
+function nactiObrazek(souborObrazku) {
+	$('#obrazek').load('obrazky/obr'+souborObrazku+'.svg', null, function() { 
 	    $('svg').click( function() {
 	    	$(event.target).attr('style', "fill:"+vypln);
 	    });
 	});
+}
+  
+$( document ).ready(function() {
+	nactiObrazek(souborObrazku);
 
 	$("#aktualniBarva").css("background-color", vypln);	 // vychozi barva po startu
 	$("#aktualniBarva").css("width", $(document).width());
@@ -140,17 +143,15 @@ $( document ).ready(function() {
 	<!-- *************************************************************** -->	
 	<div data-role="page" data-dialog="true" id="vyberObrazku">
 		<div data-role="main" class="ui-content">		
-			<ul data-role="listview" data-autodividers="true" data-inset="true">
-				<li><a href="#hlavniStranka">CentOS</a></li>
-				<li><a href="#hlavniStranka">Debian</a></li>
-				<li><a href="#hlavniStranka">Fedora</a></li>
-				<li><a href="#hlavniStranka">FreeBSD</a></li>
-				<li><a href="#hlavniStranka">Ubuntu</a></li>
-				<li><a href="#hlavniStranka">Zentyal</a></li>
+			<ul data-role="listview">
+				<li><a href="#hlavniStranka" onclick="nactiObrazek(0);">Octocat (GitHub maskot)</a></li>
+				<li><a href="#hlavniStranka" onclick="nactiObrazek(1);">Sova (asi)</a></li>
+				<li><a href="#hlavniStranka" onclick="nactiObrazek(2);">Kytka</a></li>
+				<li><a href="#hlavniStranka" onclick="nactiObrazek(3);">Raketa</a></li>
 			</ul>
 		</div>
 	</div> 
 	<!-- *************************************************************** -->
-	
+
 </body>
 </html>
