@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="eu.vancl.martin.html5omalovanky" android-versionCode="14" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+	<name>html5omalovanky</name>
+	<description>
+		Jednoduche HTMl5omalovanky.
+	</description>
+	<author email="tux.martin@gmail.com" href="http://martin.vancl.eu/">
+		Martin Vancl
+	</author>
+	<content src="index.html" />
+	<access origin="*" />
+
+	<icon src="ikonaApp.png" />
+</widget>
