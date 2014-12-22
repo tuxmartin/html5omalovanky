@@ -61,11 +61,8 @@ $( document ).ready(function() {
 
 	//$("#includedContent").load("test/test.html").trigger("create");	
 
-	$('#reset').click(function() {
-		location.reload();
-	});
-
 	$('#about_include').load('about.html').trigger("create");
+	$('#smazat_include').load('smazat.html').trigger("create");
 });
 </script>
 <!-- ############################################################### -->
@@ -135,7 +132,7 @@ $( document ).ready(function() {
 				<a href="#" onclick="vypln='yellow'"	style="background-color: yellow"	class="barva ui-btn ui-corner-all ui-shadow"></a>   
 				
 				
-				<a href="#" class="barva ui-btn ui-corner-all ui-shadow" id="reset">
+				<a href="#smazat" class="barva ui-btn ui-corner-all ui-shadow">
 					<svg id="obrazek" height="25" width="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<image x="0" y="0" height="25" width="25"  xlink:href="cross.svg" />
 					</svg>
@@ -152,6 +149,12 @@ $( document ).ready(function() {
 		<div id="about_include"></div>	
 	</div>
 	<!-- *************************************************************** -->
+
+	<!-- *************************************************************** -->
+	<div data-role="page" data-dialog="true" id="smazat">
+		<div id="smazat_include"></div>	
+	</div>
+	<!-- *************************************************************** -->	
 	
 	<!-- *************************************************************** -->	
 	<div data-role="page" data-dialog="true" id="vyberObrazku">

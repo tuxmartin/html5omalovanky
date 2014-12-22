@@ -1,0 +1,24 @@
+<script>
+$( document ).ready(function() {
+	$('#reset').click(function() {
+		location.reload();
+	});
+});
+</script>
+
+<!-- --------------------------------------------------------------- -->
+<div data-role="header">
+	<h1>HTML5 omalovánky</h1>
+</div>
+<!-- --------------------------------------------------------------- -->
+	
+<!-- --------------------------------------------------------------- -->
+<div data-role="main" class="ui-content" style="text-align: center;">
+	<p>Opravdu chcete obrázek smazat?</p>
+		
+	<div data-role="controlgroup" data-type="horizontal">
+		<a href="#hlavniStranka" class="ui-btn ui-icon-check ui-btn-icon-notext" id="reset">Ano</a>
+		<a href="#hlavniStranka" class="ui-btn ui-icon-delete ui-btn-icon-notext">Ne</a>
+	</div>	
+</div>
+<!-- --------------------------------------------------------------- -->
