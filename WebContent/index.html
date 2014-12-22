@@ -19,13 +19,20 @@
 <script	src="lib/jquery.mobile-1.4.5.min.js"></script>
 <!-- !!! NA PORADI ZALEZI !!! -->
 
+<!-- ############################################################### -->
 <style>
 .barva {
 	width: 25px;
 	height: 25px;
 }
+#aktualniBarva {
+	/* sirku nastavuje javaScript */
+	height: 5px;
+}
 </style>
+<!-- ############################################################### -->
 
+<!-- ############################################################### -->
 <script>
 var vypln = "#000"; // vychozi barva = cerna
 
@@ -40,7 +47,17 @@ function onDeviceReady() { // device APIs are available.
  
   
 $( document ).ready(function() {
-	$("#obrazek").click(function (event) { $(event.target).attr('style', "fill:"+vypln); });
+	$("#obrazek").click(function (event) {
+		$(event.target).attr('style', "fill:"+vypln);		
+	});
+
+	$("#aktualniBarva").css("background-color", vypln);	 // vychozi barva po startu
+	$("#aktualniBarva").css("width", $(document).width());
+
+
+	$(".barva").click(function (event) { // uzivatel vybral novou barvu
+		$("#aktualniBarva").css("background-color", vypln);		
+	});
 
 	//$("#includedContent").load("test/test.html").trigger("create");	
 
@@ -51,6 +68,7 @@ $( document ).ready(function() {
 	$('#about_include').load('about.html').trigger("create");
 });
 </script>
+<!-- ############################################################### -->
 
 </head>
 <body>
@@ -94,6 +112,9 @@ $( document ).ready(function() {
 	
 		<!-- --------------------------------------------------------------- -->
 		<div data-role="footer" style="text-align:center;">
+		
+			<div id="aktualniBarva"></div>
+			
 			<div data-role="controlgroup" data-type="horizontal">
 		    	<!-- http://www.elizabethcastro.com/html/colors/sixteencolors.html -->
 				<a href="#" onclick="vypln='aqua'"		style="background-color: aqua"		class="barva ui-btn ui-corner-all ui-shadow"></a>
@@ -119,7 +140,7 @@ $( document ).ready(function() {
 						<image x="0" y="0" height="25" width="25"  xlink:href="cross.svg" />
 					</svg>
 				</a>        
-			</div>
+			</div>			
 		</div>
 		<!-- --------------------------------------------------------------- -->
 	
