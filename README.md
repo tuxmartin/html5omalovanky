@@ -13,3 +13,7 @@ Obrazky jsou vektorove ve formatu SVG.
 
 Na Androidu 2.3.x nefunguje. Nezobrazuji se SVG obrazky. Koho ale dneska (22.12.2014) jeste zajima Android 2.x :-D
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tuxmartin/html5omalovanky/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
